@@ -1,0 +1,26 @@
+@import "variables"
+
+font($font-size, $line-height)
+    line-height unit($line-height/$font-size, '')
+    font-size unit($font-size, 'px')
+
+clearfix()
+    &:after
+        content "."
+        display block
+        height 0
+        clear both
+        visibility hidden
+
+active-states()
+    &:hover,
+    &:focus,
+    &:active
+        {block}
+
+active-states-and-self()
+    &,
+    &:hover,
+    &:focus,
+    &:active
+        {block}

@@ -1,0 +1,29 @@
+// Media Query Ranges
+$small-range = 0 600px;
+$medium-range = 601px 768px;
+$large-range = 769px 992px;
+$xlarge-range = 993px 1200px;
+$xxlarge-range = 1201px 10000px;
+
+$screen = unquote("only screen");
+
+media = {
+    screen: $screen,
+    landscape: s("%s and (orientation: landscape)", $screen),
+    portrait: s("%s and (orientation: portrait)", $screen),
+
+    small-up: $screen,
+    small-only: s("%s and (max-width: %s)", $screen, $small-range[1]),
+
+    medium-up: s("%s and (min-width:%s)", $screen, $medium-range[0]),
+    medium-only: s("%s and (min-width:%s) and (max-width:%s)", $screen, $medium-range[0], $medium-range[1]),
+
+    large-up: s("%s and (min-width:%s)", $screen, $large-range[0]),
+    large-only: s("%s and (min-width:%s) and (max-width:%s)", $screen, $large-range[0], $large-range[1]),
+
+    xlarge-up: s("%s and (min-width:%s)", $screen, $xlarge-range[0]),
+    xlarge-only: s("%s and (min-width:%s) and (max-width:%s)", $screen, $xlarge-range[0], $xlarge-range[1]),
+
+    xxlarge-up: s("%s and (min-width:%s)", $screen, $xxlarge-range[0]),
+    xxlarge-only: s("%s and (min-width:%s) and (max-width:%s)", $screen, $xxlarge-range[0], $xxlarge-range[1])
+}

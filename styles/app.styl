@@ -1,0 +1,171 @@
+@import normalize
+@import layout
+@import mixins
+
+*
+    box-sizing border-box
+
+html, body
+    height 100%
+    min-height 100%
+    margin 0
+    padding 0
+    font-family 'Avenir' sans-serif
+    color #000
+    background #fff
+
+ul
+li
+    margin 0
+    padding 0
+    color red
+
+li
+    list-style none
+    padding-left 30px
+
+.simple
+.colored
+    li
+        background url('images/bullet-gray.svg') 5px .4em no-repeat
+        background-size 10px
+
+.colored
+    li
+        &:nth-child(4n-3)
+            background-image url('images/bullet-blue.svg')
+
+        &:nth-child(4n-2)
+            background-image url('images/bullet-pink.svg')
+
+        &:nth-child(4n-1)
+            background-image url('images/bullet-yellow.svg')
+
+        &:nth-child(4n)
+            background-image url('images/bullet-green.svg')
+
+.call-to-action
+    padding 0 15px
+    line-height 51px
+    border none
+    border-radius 5px
+    color #fff
+    background #1fc6c6
+
+.header
+    padding 70px 0
+    text-align center
+    background url("images/bg-l.svg") 0 0 no-repeat, url("images/bg-r.svg") 100% 0 no-repeat
+
+    h2
+        margin 0
+        font(50, 68)
+
+.logo
+    margin 0 auto 80px
+
+.basicinfo
+    background #fafbfa
+
+.important
+    margin 5px 0 50px
+    font(25, 34)
+
+h3
+    margin 0 0 10px
+    font(30, 41)
+
+    &.onecol
+        text-align center
+
+        &:before
+        &:after
+            content ''
+            display inline-block
+            width 50px
+            height 2px
+            vertical-align middle
+            margin 0 20px
+            background #e9e9e9
+
+.desc
+    p
+    li
+        font(20, 30)
+        color #72757d
+
+.content
+    padding 60px 0
+
+.expected
+    background url('images/bg-expected.jpg') 0 0;
+
+.centered-content
+    text-align center
+
+.accepted
+    .meme
+        display inline-block
+        width 230px
+        height 230px
+        margin 0 0 30px
+        padding-top 28px
+        border-radius 300px
+        background #fafafa
+
+        img
+            // display block
+
+footer
+    overflow hidden
+    color #fff
+    background #292b2c
+
+    h3
+        font(25, 48)
+
+    a
+        color inherit
+
+.social
+    padding 80px 0 60px
+    border-bottom 1px solid #494b4c
+
+.social-list
+    li
+        display inline
+
+        .icon
+            display inline-block
+            width 50px
+            height 50px
+            background-size 50px
+
+        .facebook
+            background-image url('images/social-facebook.svg')
+
+            +active-states()
+                background-image url('images/social-facebook-hover.svg')
+
+        .twitter
+            background-image url('images/social-twitter.svg')
+
+            +active-states()
+                background-image url('images/social-twitter-hover.svg')
+
+        .linkedin
+            background-image url('images/social-linkedin.svg')
+
+            +active-states()
+                background-image url('images/social-linkedin-hover.svg')
+
+.contact
+    padding 25px 0
+    vertical-align middle
+    font(14, 31)
+
+    p
+        margin 0
+
+    img
+        display block

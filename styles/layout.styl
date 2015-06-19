@@ -1,0 +1,70 @@
+@import "mixins"
+
+$grid-gutter = 0
+$grid-columns = 12
+$grid-padding = 10px
+
+.row
+    clearfix()
+    max-width 960px
+    margin 0 auto
+
+.columns
+    float left
+    min-height 1px
+    border-left $grid-gutter solid transparent
+    padding-left ($grid-padding / 2)
+    padding-right ($grid-padding / 2)
+    margin-left -($grid-gutter)
+
+    &.split
+        padding-right 0
+        padding-left 0
+
+    &.right
+        float right
+
+    &.center
+        float none
+        margin-left auto
+        margin-right auto
+
+@media media.screen
+    for $column in 1..$grid-columns
+
+        .small-{$column}
+            @extend .columns
+            width unit(($column / $grid-columns) * 100, '%')
+
+        .small-offset-{$column}
+            margin-left unit(($column / $grid-columns) * 100, '%')
+
+@media media.medium-up
+    for $column in 1..$grid-columns
+
+        .medium-{$column}
+            @extend .columns
+            width unit(($column / $grid-columns) * 100, '%')
+
+        .medium-offset-{$column}
+            margin-left unit(($column / $grid-columns) * 100, '%')
+
+@media media.large-up
+    for $column in 1..$grid-columns
+
+        .large-{$column}
+            @extend .columns
+            width unit(($column / $grid-columns) * 100, '%')
+
+        .large-offset-{$column}
+            margin-left unit(($column / $grid-columns) * 100, '%')
+
+@media media.xlarge-up
+    for $column in 1..$grid-columns
+
+        .xlarge-{$column}
+            @extend .columns
+            width unit(($column / $grid-columns) * 100, '%')
+
+        .xlarge-offset-{$column}
+            margin-left unit(($column / $grid-columns) * 100, '%')
