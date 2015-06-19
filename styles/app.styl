@@ -1,6 +1,7 @@
 @import normalize
 @import layout
 @import mixins
+@import fonts
 
 *
     box-sizing border-box
@@ -45,10 +46,12 @@ li
             background-image url('images/bullet-green.svg')
 
 .call-to-action
+    display inline-block
     padding 0 15px
     line-height 51px
     border none
     border-radius 5px
+    text-decoration none
     color #fff
     background #1fc6c6
 
@@ -95,7 +98,11 @@ h3
         color #72757d
 
 .content
+.content-part
     padding 60px 0
+
+.content-part
+    padding-top 30px
 
 .expected
     background url('images/bg-expected.jpg') 0 0;

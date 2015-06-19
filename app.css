@@ -698,6 +698,20 @@ th {
     margin-left: 100%;
   }
 }
+@font-face {
+  font-family: 'Avenir';
+  src: url("fonts/Avenir-Heavy.eot");
+  src: url("fonts/Avenir-Heavy.eot?#iefix") format('embedded-opentype'), url("fonts/Avenir-Heavy.woff") format('woff'), url("fonts/Avenir-Heavy.ttf") format('truetype'), url("fonts/Avenir-Heavy.svg#5210a83cbeaba3c69473142e37abdff7") format('svg');
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url("fonts/Avenir-Roman.eot");
+  src: url("fonts/Avenir-Roman.eot?#iefix") format('embedded-opentype'), url("fonts/Avenir-Roman.woff") format('woff'), url("fonts/Avenir-Roman.ttf") format('truetype'), url("fonts/Avenir-Roman.svg#2b3cb83e00b279c4ab15de4d02a9caf1") format('svg');
+  font-style: normal;
+  font-weight: 400;
+}
 * {
   box-sizing: border-box;
 }
@@ -739,10 +753,12 @@ li {
   background-image: url("images/bullet-green.svg");
 }
 .call-to-action {
+  display: inline-block;
   padding: 0 15px;
   line-height: 51px;
   border: none;
   border-radius: 5px;
+  text-decoration: none;
   color: #fff;
   background: #1fc6c6;
 }
@@ -791,8 +807,12 @@ h3.onecol:after {
   font-size: 20px;
   color: #72757d;
 }
-.content {
+.content,
+.content-part {
   padding: 60px 0;
+}
+.content-part {
+  padding-top: 30px;
 }
 .expected {
   background: url("images/bg-expected.jpg") 0 0;
